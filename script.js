@@ -1,8 +1,8 @@
 var generateBtn = document.querySelector("#generate");
-var numberic = "0123456789";
+var numeric = "0123456789";
 var specialCharacters = "`~!@#$%^&*()_-=+[]{}';:,<.>/?";
 var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var lowercasse = "abcdefghijklmnopqrstuvwxyz";
+var lowercase = "abcdefghijklmnopqrstuvwxyz";
 
 function generatePassword() {
   var generatedPassword = "";
@@ -49,7 +49,7 @@ function writePassword() {
   if (password !== undefined) {
     passwordText.value = password;
   } else {
-    passwordText.value = ""
+    passwordText.value = "";
   }
 }
 
