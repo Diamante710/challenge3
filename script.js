@@ -4,6 +4,16 @@ var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var lowercase = "abcdefghijklmnopqrstuvwxyz";
 var generateBtn = document.querySelector("#generate");
 
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+  if (password !== undefined) {
+    passwordText.value = password;
+  } else {
+    passwordText.value = "";
+  }
+}
+
 function generatePassword() {
   var generatedPassword = "";
   var passwordLength = prompt("How many characters do you want your password to contain?");
@@ -41,16 +51,6 @@ function generatePassword() {
     }
   }
   return generatedPassword;
-}
-
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-  if (password !== undefined) {
-    passwordText.value = password;
-  } else {
-    passwordText.value = "";
-  }
 }
 
 generateBtn.addEventListener("click", writePassword);
